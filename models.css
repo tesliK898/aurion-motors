@@ -1,0 +1,172 @@
+/* Основні налаштування для всього сайту */
+body {
+    margin: 0;
+    padding-top: 70px; /* Важливо: додаємо відступ, щоб контент не ховався під банер */
+    background-color: #0b0b0b;
+}
+
+/* Виправлений Header */
+.aurion-header {
+    background-color: #000000; /* Чистий чорний фон */
+    height: 70px;
+    width: 100%;
+    
+    /* Фіксація зверху */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Щоб банер завжди був поверх інших елементів */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #1a1a1a; /* Тонка лінія знизу */
+}
+
+/* Логотип та назва зліва */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.aurion-logo {
+    height: 40px;
+    width: auto;
+}
+
+.brand-title {
+    color: #c5a059; /* Золотий колір як на фото */
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Навігація справа */
+.header-right {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: serif;
+    transition: color 0.3s ease;
+}
+
+.header-right li a:hover {
+    color: #c5a059; /* Підсвічування золотом при наведенні */
+}
+.models-catalog {
+    background-color: #0b0b0b;
+    padding: 60px 0 100px;
+    color: white;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.catalog-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    color: #c5a059;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.catalog-header p {
+    color: #888;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+/* Сітка карток */
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стиль кожної картки */
+.model-card {
+    background-color: #111;
+    border: 1px solid #222;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.model-card:hover {
+    border-color: #c5a059;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.model-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: radial-gradient(circle, #222 0%, #000 100%); /* Фон під авто */
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Щоб машина була видна повністю */
+    transition: transform 0.6s ease;
+    padding: 20px;
+}
+
+.model-card:hover .model-image img {
+    transform: scale(1.1);
+}
+
+.model-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.model-info h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.model-info p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    min-height: 40px;
+}
+
+/* Кнопка "Докладніше" */
+.btn-explore {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: transparent;
+    border: 1px solid #4a0e0e; /* Твій темно-червоний колір */
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: #4a0e0e;
+    box-shadow: 0 0 15px rgba(74, 14, 14, 0.5);
+}

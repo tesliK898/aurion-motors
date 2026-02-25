@@ -1,0 +1,162 @@
+/* Основні налаштування для всього сайту */
+body {
+    margin: 0;
+    padding-top: 70px; /* Важливо: додаємо відступ, щоб контент не ховався під банер */
+    background-color: #0b0b0b;
+}
+
+/* Виправлений Header */
+.aurion-header {
+    background-color: #000000; /* Чистий чорний фон */
+    height: 70px;
+    width: 100%;
+    
+    /* Фіксація зверху */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Щоб банер завжди був поверх інших елементів */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #1a1a1a; /* Тонка лінія знизу */
+}
+
+/* Логотип та назва зліва */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.aurion-logo {
+    height: 40px;
+    width: auto;
+}
+
+.brand-title {
+    color: #c5a059; /* Золотий колір як на фото */
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Навігація справа */
+.header-right {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: serif;
+    transition: color 0.3s ease;
+}
+
+.header-right li a:hover {
+    color: #c5a059; /* Підсвічування золотом при наведенні */
+}
+.team-page {
+    background-color: #370F0F; /* Той самий колір фону, що й у Body */
+    padding: 80px 0;
+    color: white;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-header h1 {
+    color: #c5a059; /* Золотий колір */
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.team-header p {
+    color: #888;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Сітка команди */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Картка учасника */
+.team-card {
+    background-color: #141414;
+    border: 1px solid #222;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: #c5a059; /* Підсвітка золотом при наведенні */
+}
+
+.member-photo {
+    height: 350px;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(40%); /* Легкий ефект ч/б для стилю */
+    transition: 0.4s;
+}
+
+.team-card:hover .member-photo img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.member-info {
+    padding: 25px;
+}
+
+.member-info h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.member-info .role {
+    color: #c5a059;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.member-social a {
+    color: #555;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.member-social a:hover {
+    color: #c5a059;
+}

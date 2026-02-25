@@ -1,0 +1,190 @@
+/* Основні налаштування для всього сайту */
+body {
+    margin: 0;
+    padding-top: 70px; /* Важливо: додаємо відступ, щоб контент не ховався під банер */
+    background-color: #0b0b0b;
+}
+
+/* Виправлений Header */
+.aurion-header {
+    background-color: #000000; /* Чистий чорний фон */
+    height: 70px;
+    width: 100%;
+    
+    /* Фіксація зверху */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Щоб банер завжди був поверх інших елементів */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #1a1a1a; /* Тонка лінія знизу */
+}
+
+/* Логотип та назва зліва */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.aurion-logo {
+    height: 40px;
+    width: auto;
+}
+
+.brand-title {
+    color: #c5a059; /* Золотий колір як на фото */
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Навігація справа */
+.header-right {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: serif;
+    transition: color 0.3s ease;
+}
+
+.header-right li a:hover {
+    color: #c5a059; /* Підсвічування золотом при наведенні */
+}
+.about-section {
+    background-color: #0b0b0b;
+    padding: 120px 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.pre-title {
+    color: #c5a059;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.gold-divider {
+    width: 80px;
+    height: 2px;
+    background: #c5a059;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.lead-text {
+    font-size: 1.4rem;
+    color: #c5a059;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.about-text p {
+    color: #888;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 50px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-family: 'Cinzel', serif;
+    color: #c5a059;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+/* Візуал */
+.about-visual {
+    flex: 1;
+    position: relative;
+}
+
+.image-stack {
+    position: relative;
+    padding: 20px;
+}
+
+.img-main {
+    width: 100%;
+    border: 1px solid #c5a059;
+    filter: grayscale(0.5);
+    transition: 0.5s;
+}
+
+.img-main:hover {
+    filter: grayscale(0);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    background: #c5a059;
+    color: #000;
+    padding: 30px 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    letter-spacing: 3px;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+    .about-grid { flex-direction: column; gap: 60px; text-align: center; }
+    .stats-row { justify-content: center; }
+    .experience-badge { display: none; }
+}
